@@ -1,3 +1,9 @@
+---
+layout: default
+title: PREFS class
+nav_order: 2
+---
+
 # PREFS class
 
 ## Init

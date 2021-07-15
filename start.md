@@ -1,3 +1,10 @@
+---
+layout: default
+title: Getting started
+nav_order: 1
+---
+
+
 # Welcome to PREFS Documentation
 
 PREFS is a simple but useful python library to store and manage user preferences.

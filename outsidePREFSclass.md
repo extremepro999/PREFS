@@ -1,3 +1,10 @@
+---
+layout: default
+title: Outside PREFS class
+nav_order: 3
+---
+
+
 # Outside PREFS class
 
 ## Methods outside PREFS class

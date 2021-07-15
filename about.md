@@ -1,3 +1,9 @@
+---
+layout: default
+title: Contact me
+nav_order: 4
+---
+
 ## Links
 
 -   Github page: [https://github.com/Patitotective/PREFS](https://github.com/Patitotective/PREFS).
