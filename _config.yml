@@ -1,4 +1,8 @@
 theme: jekyll-theme-slate
+
+name: PREFS documentation
+description: Documentation of PREFS Python library.
+url: "https://patitotective.github.io/PREFS/"
 markdown: kramdown
 highlighter: rouge
 
