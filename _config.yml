@@ -1,11 +1,6 @@
-theme: jekyll-theme-slate
+remote_theme: pmarsceill/just-the-docs
 
 name: PREFS documentation
 description: Documentation of PREFS Python library.
 url: "https://patitotective.github.io/PREFS/"
-markdown: kramdown
-highlighter: rouge
-
-kramdown:
-  math_engine: mathjax
-  syntax_highlighter: rouge
+logo: "/assets/logo.png"
