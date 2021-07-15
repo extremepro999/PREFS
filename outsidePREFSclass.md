@@ -6,7 +6,7 @@ Methods that aren't inside the PREFS class.
 
 ### `ReadJsonFile()`
 
-```Python
+```python
 ReadJsonFile(filename: str, extension: str="json")
 ```
 
@@ -19,7 +19,7 @@ Arguments:
 
 Example:
 
-```Python
+```python
 import PREFS
 
 prefs = PREFS.ReadJsonFile("someJSONFile") # Read someJSONFile and store it's value in prefs
@@ -29,7 +29,7 @@ JSONPrefs = PREFS.PREFS(prefs, filename="jsonPrefs") # Create an instance of the
 
 ### `GetStats()`
 
-```Python
+```python
 
 GetStats(mode: str="overall", period: str="", mirrors: bool=None, version: str="", os: str="", format: str="markdown")
 ```
@@ -40,7 +40,7 @@ To see the arguments and the return values see [https://pypi.org/project/pypista
 
 Example:
 
-```Python
+```python
 import PREFS
 
 PREFS.GetStats() # Get PREFS library stats in pypi

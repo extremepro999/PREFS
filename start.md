@@ -13,7 +13,7 @@ MacOS and Linux:
 
 Once you have installed PREFS correctly create a new python file and import PREFS:
 
-```Python
+```python
 import PREFS # Importing PREFS python library
 ```
 
@@ -21,7 +21,7 @@ import PREFS # Importing PREFS python library
 
 To create a PREFS file you need to create an instance of the PREFS class passing in the `prefs` parameter a dictionary with the default PREFS:
 
-```Python
+```python
 UserPrefs = PREFS.PREFS(prefs = {
     "theme": "light",
     "lang": "en",
@@ -36,7 +36,7 @@ PREFS class has others optional parameters such as:
 
 If you open your PREFS file, you will see something like this:
 
-```Python
+```python
 #PREFS
 theme='light'
 lang='en'
@@ -53,7 +53,7 @@ both returns a dictionary with the PREFS:
 
 Using `ReadPrefs()` method:
 
-```Python
+```python
 print(UserPrefs.ReadPrefs()) # Getting PREFS with ReadPrefs() method and printing it
 
 >>> {'theme': 'light', 'lang': 'en', 'keybindings': {'Copy': 'Ctrl+C', 'Paste': 'Ctrl+V', 'Cut': 'Ctrl+X'}}
@@ -61,7 +61,7 @@ print(UserPrefs.ReadPrefs()) # Getting PREFS with ReadPrefs() method and printin
 
 Using `file` attribute:
 
-```Python
+```python
 print(UserPrefs.file) # Getting PREFS with file attribute and printing it
 
 >>> {'theme': 'light', 'lang': 'en', 'keybindings': {'Copy': 'Ctrl+C', 'Paste': 'Ctrl+V', 'Cut': 'Ctrl+X'}}
@@ -76,7 +76,7 @@ To change the value of a pref you need to use `WritePrefs()` method which requir
 
 For example:
 
-```Python
+```python
 print(UserPrefs.file["lang"]) # Getting the lang value from the PREFS and printing it
 >>> en
 
@@ -89,7 +89,7 @@ print(UserPrefs.file["lang"]) # Getting the lang value from the PREFS and printi
 If you want to change the value of a nested dictionary (e.g. keybindings) you need to pass the keys path separated by a forward slash.
 For example:
 
-```Python
+```python
 print(UserPrefs.file["keybindings"]) # Getting the keybindings value (which is a dictionary) from the PREFS and printing it
 >>> {'Copy': 'Ctrl+C', 'Paste': 'Ctrl+V', 'Cut': 'Ctrl+X'}
 
@@ -104,7 +104,7 @@ In the above example we have accessed to a nested dictionary using the keys path
 As you know PREFS file is a dictionary so if you pass any key that isn't in the PREFS file it will be created:
 For example:
 
-```Python
+```python
 print(UserPrefs.file["keybindings"]) # Getting the keybindings value (which is a dictionary) from the PREFS and printing it
 >>> {'Copy': 'Ctrl+D', 'Paste': 'Ctrl+V', 'Cut': 'Ctrl+X'}
 

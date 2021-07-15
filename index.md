@@ -10,7 +10,7 @@ PREFS is a simple but useful python library to store and manage user preferences
 
 This could be a PREFS file:
 
-```Python
+```python
 #PREFS
 theme="light"
 lang="en"

@@ -2,7 +2,7 @@
 
 ## Init
 
-```Python
+```python
 PREFS.PREFS(self, prefs: dict, filename: str="prefs", extension: str="prefs", separator: str="=", ender: str="\n", continuer: str=">",
 interpret: bool=True, dictionary: bool=False, verbose: bool=False, cascade: bool=True):
 ```
@@ -29,7 +29,7 @@ Ignoring the init parameters.
 Easier way to acces to the PREFS file. Has the same value as `ReadPrefs()`.  
 Example:
 
-```Python
+```python
 import PREFS
 
 UserPrefs = PREFS.PREFS(prefs = {
@@ -46,7 +46,7 @@ print(UserPrefs.file)
 
 ### `ReadPrefs()`
 
-```Python
+```python
 ReadPrefs() -> dict
 ```
 
@@ -59,7 +59,7 @@ A dictionary reading the PREFS file.
 
 Example:
 
-```Python
+```python
 import PREFS
 
 UserPrefs = PREFS.PREFS(prefs = {
@@ -76,7 +76,7 @@ print(UserPrefs.ReadPrefs())
 
 ### `WritePrefs()`
 
-```Python
+```python
 WritePrefs(pref: str, value: any) -> None
 ```
 
@@ -92,7 +92,7 @@ Returns:
 
 Example:
 
-```Python
+```python
 import PREFS
 
 UserPrefs = PREFS.PREFS(prefs = {
@@ -113,7 +113,7 @@ print(UserPrefs.file["lang"]) # Getting the lang value from the PREFS and printi
 To change the value of a nested dictionary pass a path of keys to find the value you want.
 Example:
 
-```Python
+```python
 import PREFS
 
 UserPrefs = PREFS.PREFS(prefs = {
@@ -133,7 +133,7 @@ print(UserPrefs.file["keybindings"]) # Getting the keybindings value (which is a
 
 Another example creating a new pref in a nested dictionary:
 
-```Python
+```python
 import PREFS
 
 UserPrefs = PREFS.PREFS(prefs = {
@@ -153,7 +153,7 @@ print(UserPrefs.file["keybindings"]) # Getting the keybindings value (which is a
 
 ### `OverWritePrefs()`
 
-```Python
+```python
 OverWritePrefs(prefs: dict=None) -> None
 ```
 
@@ -168,7 +168,7 @@ Returns:
 
 Example:
 
-```Python
+```python
 import PREFS
 
 UserPrefs = PREFS.PREFS(prefs = {
@@ -209,7 +209,7 @@ So the program will always has the same output because we overwrite the old PREF
 
 ### `ChangeFilename()`
 
-```Python
+```python
 ChangeFilename(filename: str) -> None
 ```
 
@@ -224,7 +224,7 @@ Returns: `None`
 
 Example:
 
-```Python
+```python
 import PREFS
 
 UserPrefs = PREFS.PREFS(prefs = {
@@ -239,7 +239,7 @@ UserPrefs.ChangeFilename("otherFilename") # Chaning the name of the PREFS file f
 
 ### `DeleteFile()`
 
-```Python
+```python
 DeleteFile() -> None
 ```
 
@@ -250,7 +250,7 @@ Returns: `None`
 
 Example:
 
-```Python
+```python
 import PREFS
 
 UserPrefs = PREFS.PREFS(prefs = {
@@ -265,7 +265,7 @@ UserPrefs.DeleteFile() # Delete the PREFS file
 
 ### `ConvertToJson()`
 
-```Python
+```python
 ConvertToJson(filename: str="", extension: str="json") -> None
 ```
 
@@ -281,7 +281,7 @@ Returns:
 
 Example:
 
-```Python
+```python
 import PREFS
 
 UserPrefs = PREFS.PREFS(prefs = {
