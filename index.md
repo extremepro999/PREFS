@@ -21,5 +21,3 @@ keybindings=>
   Ctrl+X="Cut"
   Ctrl+Q="Quit"
 ```
-
-{% include navigation.html}
