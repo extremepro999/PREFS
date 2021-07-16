@@ -1,4 +1,6 @@
 ---
+#layout: default
+title: Contact me
 nav_order: 4
 ---
 

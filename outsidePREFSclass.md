@@ -1,4 +1,6 @@
 ---
+#layout: default
+title: Outside PREFS class
 nav_order: 3
 ---
 

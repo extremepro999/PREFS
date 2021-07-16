@@ -1,4 +1,6 @@
 ---
+#layout: default
+title: License MIT
 nav_order: 5
 ---
 
