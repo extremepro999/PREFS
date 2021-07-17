@@ -13,7 +13,7 @@ PREFS.PREFS(self, prefs: dict, filename: str="prefs", extension: str="prefs", se
 interpret: bool=True, dictionary: bool=False, verbose: bool=False, cascade: bool=True):
 ```
 
-```
+```python
 prefs (dict): A dictionary with the default preferences.
 filename (str, optional="prefs"): The name of the file (supports path).
 extension (str, optinal="prefs"): The extension of the file.
@@ -22,7 +22,7 @@ ender (str, optional="\n"): The character at the end of each pref:value.
 continuer (str, optional=">"): The character that precede a tree/cascade (nested dictionary).
 interpret (bool, optional=True): Interpret the value stored as python.
 dictionary (bool, optional=False): Writes the prefs as a python dictionary, no more human-readable (avoid any error at reading).
-verbose (bool, optional=False): Pirnt logs all operations.
+verbose (bool, optional=False): Print logs all operations.
 cascade (bool, optional=True): Stores nested dictionaries as tree/cascade.
 ```
 

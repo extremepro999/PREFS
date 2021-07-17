@@ -34,31 +34,55 @@ JSONPrefs = PREFS.PREFS(prefs, filename="jsonPrefs") # Create an instance of the
 
 ```
 
-### `GetStats()`
+### `ReadPrefs()`
 
 ```python
 
-GetStats(mode: str="overall", period: str="", mirrors: bool=None, version: str="", os: str="", format: str="markdown")
+ReadPrefs(filename: str, extension: str="prefs", separator: str="=", ender: str="\n", continuer: str=">", 
+		interpret: bool=True, dictionary: bool=False, verbose: bool=False, cascade: bool=True)
 ```
 
-Using pypistats library returns PREFS stats.
+Given the filename of PREFS file returns it's value.
 
-To see the arguments and the return values see [https://pypi.org/project/pypistats/](https://pypi.org/project/pypistats/)
+The arguments are the almost the same as PREFS class.
+
+Arguments:
+
+- `filename (str, optional="prefs")`: The name of the file (supports path).
+- `extension (str, optinal="prefs")`: The extension of the file.
+- `separator (str, optional="=")`: The character between pref and value in the file.
+- `ender (str, optional="\n")`: The character at the end of each pref:value.
+- `continuer (str, optional=">")`: The character that precede a tree/cascade (nested dictionary).
+- `interpret (bool, optional=True)`: Interpret the value stored as python.
+- `dictionary (bool, optional=False)`: Writes the prefs as a python dictionary, no more human-readable (avoid any error at reading).
+- `verbose (bool, optional=False)`: Print logs all operations.
+- `cascade (bool, optional=True)`: Stores nested dictionaries as tree/cascade.
+
+Returns:
+	A dictionary with the PREFS of the given PREFS filename.
 
 Example:
 
 ```python
 import PREFS
 
-PREFS.GetStats() # Get PREFS library stats in pypi
+# Instead of doing this
+"""UserPrefs = PREFS.PREFS(prefs = {
+    "theme": "light",
+    "lang": "en"
+    })"""
 
->>>
-|    category     | percent | downloads |
-| --------------- | ------: | --------: |
-| with_mirrors    | 100.00% |    15,961 |
-| without_mirrors |   9.31% |     1,486 |
-| Total           |         |    15,961 |
+# Create manually a PREFS file with the default PREFS
+UserPrefs = PREFS.PREFS(prefs = {PREFS.ReadPrefs("prefs")})
 
-Date range: 2021-05-01 - 2021-07-11
+print(UserPrefs.file)
 
+>>> {'theme': 'light', 'lang': 'en'}
+```
+
+The PREFS file with the default preferences looks like this:
+```
+#PREFS
+theme='light'
+lang='en'
 ```
