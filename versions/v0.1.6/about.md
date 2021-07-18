@@ -1,7 +1,8 @@
 ---
-#layout: default
-title: Contact me
-#nav_order: 4
+layout: page
+nav_order: 5
+permalink: v0.1.6/about/
+title: About
 ---
 
 ## Links
@@ -24,5 +25,6 @@ Contact me:
 -   Discord: **patitotective#0127**.
 -   Email: **cristobalriaga@gmail.com**.
 
-This documentation stands for PREFS v0.1.6
+This documentation stands for PREFS v0.1.6.
+
 Made by Patitotective.

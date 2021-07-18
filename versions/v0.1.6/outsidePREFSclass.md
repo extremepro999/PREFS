@@ -1,9 +1,16 @@
 ---
-#layout: default
+nav_order: 3
+permalink: v0.1.6/outsideprefsclass/
 title: Outside PREFS class
-#nav_order: 3
 ---
 
+## Table of contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
+# PREFS class
 
 # Outside PREFS class
 

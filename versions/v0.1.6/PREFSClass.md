@@ -1,8 +1,14 @@
 ---
-#layout: default
+nav_order: 2
+permalink: v0.1.6/prefsclass/
 title: PREFS class
-#nav_order: 2
 ---
+
+## Table of contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
 
 # PREFS class
 

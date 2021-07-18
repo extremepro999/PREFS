@@ -1,11 +1,11 @@
 ---
-#layout: default
+layout: home
+nav_order: 0
+permalink: v0.1.6/home/
 title: Home
-#nav_order: 0
 ---
 
-
-# What is PREFS??
+# What is PREFS?
 
 PREFS is a simple but useful python library to store and manage user preferences.
 

@@ -1,9 +1,16 @@
 ---
-#layout: default
+nav_order: 1
+permalink: v0.1.6/start/
 title: Getting started
-#nav_order: 1
 ---
 
+## Table of contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
+# PREFS class
 
 # Welcome to PREFS Documentation
 
