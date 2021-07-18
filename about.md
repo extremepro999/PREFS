@@ -24,5 +24,5 @@ Contact me:
 -   Discord: **patitotective#0127**.
 -   Email: **cristobalriaga@gmail.com**.
 
-This documentation stands for PREFS v0.1.5
+This documentation stands for PREFS v0.1.6
 Made by Patitotective.
