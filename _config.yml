@@ -4,4 +4,4 @@ name: PREFS documentation
 description: Documentation of PREFS Python library.
 url: "https://patitotective.github.io/PREFS/"
 logo: "/assets/logo.png"
-permalink: pretty
+#permalink: pretty
