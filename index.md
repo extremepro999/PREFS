@@ -1,6 +1,5 @@
 ---
-#layout: default
-permalink: /:basename/:title
+layout: default
 title: Home
 nav_order: 0
 ---
