@@ -2,10 +2,11 @@ remote_theme: pmarsceill/just-the-docs
 
 name: PREFS documentation
 description: Documentation of PREFS Python library.
-# url: "https://patitotective.github.io/PREFS/"
+url: "https://patitotective.github.io/PREFS/Pages"
 logo: "/assets/logo.png"
-permalink: pretty
+#permalink: pretty
 markdown: CommonMarkGhPages
 source: ./Pages
+exclude: ["README.md"]
 #markdown            : kramdown
 #highlighter         : rouge
