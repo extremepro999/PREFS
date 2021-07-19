@@ -26,9 +26,10 @@ url: "" # "https://patitotective.github.io/PREFS" # the base hostname & protocol
 # twitter_username: jekyllrb
 github_username: Patitotective
 
-remote-theme: pmarsceill/just-the-docs
+remote_theme: pmarsceill/just-the-docs
 
 markdown: kramdown
 highlighter: rouge
 plugins:
   - jekyll-feed
+  - jekyll-remote-theme

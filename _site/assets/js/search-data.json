@@ -1,0 +1,158 @@
+{"0": {
+    "doc": "License MIT",
+    "title": "License MIT",
+    "content": "Copyright 2021 Cristobal Riaga . Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: . The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. ",
+    "url": "http://localhost:4000/v0.1.6/license/",
+    "relUrl": "/v0.1.6/license/"
+  },"1": {
+    "doc": "PREFS class",
+    "title": "Table of contents",
+    "content": ". | PREFS class . | Init | Attributes . | file | . | Methods . | ReadPrefs() | WritePrefs() | OverWritePrefs() | ChangeFilename() | DeleteFile() | ConvertToJson() | . | . | . ",
+    "url": "http://localhost:4000/v0.1.6/prefsclass/#table-of-contents",
+    "relUrl": "/v0.1.6/prefsclass/#table-of-contents"
+  },"2": {
+    "doc": "PREFS class",
+    "title": "PREFS class",
+    "content": " ",
+    "url": "http://localhost:4000/v0.1.6/prefsclass/",
+    "relUrl": "/v0.1.6/prefsclass/"
+  },"3": {
+    "doc": "PREFS class",
+    "title": "Init",
+    "content": "PREFS.PREFS(self, prefs: dict, filename: str=\"prefs\", extension: str=\"prefs\", separator: str=\"=\", ender: str=\"\\n\", continuer: str=\"&gt;\", interpret: bool=True, dictionary: bool=False, verbose: bool=False, cascade: bool=True): . prefs (dict): A dictionary with the default preferences. filename (str, optional=\"prefs\"): The name of the file (supports path). extension (str, optinal=\"prefs\"): The extension of the file. separator (str, optional=\"=\"): The character between pref and value in the file. ender (str, optional=\"\\n\"): The character at the end of each pref:value. continuer (str, optional=\"&gt;\"): The character that precede a tree/cascade (nested dictionary). interpret (bool, optional=True): Interpret the value stored as python. dictionary (bool, optional=False): Writes the prefs as a python dictionary, no more human-readable (avoid any error at reading). verbose (bool, optional=False): Print logs all operations. cascade (bool, optional=True): Stores nested dictionaries as tree/cascade. ",
+    "url": "http://localhost:4000/v0.1.6/prefsclass/#init",
+    "relUrl": "/v0.1.6/prefsclass/#init"
+  },"4": {
+    "doc": "PREFS class",
+    "title": "Attributes",
+    "content": "Ignoring the init parameters. file . Easier way to acces to the PREFS file. Has the same value as ReadPrefs(). Example: . import PREFS UserPrefs = PREFS.PREFS(prefs = { \"theme\": \"light\", \"lang\": \"en\" }) print(UserPrefs.file) &gt;&gt;&gt; {'theme': 'light', 'lang': 'en'} . ",
+    "url": "http://localhost:4000/v0.1.6/prefsclass/#attributes",
+    "relUrl": "/v0.1.6/prefsclass/#attributes"
+  },"5": {
+    "doc": "PREFS class",
+    "title": "Methods",
+    "content": "ReadPrefs() . ReadPrefs() -&gt; dict . Reads the PREFS file and returns it’s value. Arguments: Doesn’t require any arguments. Returns: A dictionary reading the PREFS file. Example: . import PREFS UserPrefs = PREFS.PREFS(prefs = { \"theme\": \"light\", \"lang\": \"en\", \"keybindings\": {\"Copy\": \"Ctrl+C\", \"Paste\": \"Ctrl+V\", \"Cut\": \"Ctrl+X\"} }) print(UserPrefs.ReadPrefs()) &gt;&gt;&gt; {'theme': 'light', 'lang': 'en'} . WritePrefs() . WritePrefs(pref: str, value: any) -&gt; None . Reads the PREFS file and changes the given key to the given value. Arguments: . | pref (str): The name of the pref to modify or create if it doesn’t exist. | value (any): The value to assign to the given pref. | . Returns: None . Example: . import PREFS UserPrefs = PREFS.PREFS(prefs = { \"theme\": \"light\", \"lang\": \"en\", \"keybindings\": {\"Copy\": \"Ctrl+C\", \"Paste\": \"Ctrl+V\", \"Cut\": \"Ctrl+X\"} }) # Creating an PREFS instance print(UserPrefs.file[\"lang\"]) # Getting the lang value from the PREFS and printing it &gt;&gt;&gt; en UserPrefs.WritePrefs(\"lang\", \"es\") # Changing the lang value from en to es print(UserPrefs.file[\"lang\"]) # Getting the lang value from the PREFS and printing it &gt;&gt;&gt; es . To change the value of a nested dictionary pass a path of keys to find the value you want. Example: . import PREFS UserPrefs = PREFS.PREFS(prefs = { \"theme\": \"light\", \"lang\": \"en\", \"keybindings\": {\"Copy\": \"Ctrl+C\", \"Paste\": \"Ctrl+V\", \"Cut\": \"Ctrl+X\"} }) # Creating an PREFS instance print(UserPrefs.file[\"keybindings\"]) # Getting the keybindings value (which is a dictionary) from the PREFS and printing it &gt;&gt;&gt; {'Copy': 'Ctrl+C', 'Paste': 'Ctrl+V', 'Cut': 'Ctrl+X'} UserPrefs.WritePrefs(\"keybindings/Copy\", \"Ctrl+D\") # Changing the Copy value inside the dictionary keybindings inside the PREFS file from Ctrll+C to Ctrl+D print(UserPrefs.file[\"keybindings\"]) # Getting the keybindings value (which is a dictionary) from the PREFS and printing it &gt;&gt;&gt; {'Copy': 'Ctrl+D', 'Paste': 'Ctrl+V', 'Cut': 'Ctrl+X'} . Another example creating a new pref in a nested dictionary: . import PREFS UserPrefs = PREFS.PREFS(prefs = { \"theme\": \"light\", \"lang\": \"en\", \"keybindings\": {\"Copy\": \"Ctrl+C\", \"Paste\": \"Ctrl+V\", \"Cut\": \"Ctrl+X\"} }) # Creating an PREFS instance print(UserPrefs.file[\"keybindings\"]) # Getting the keybindings value (which is a dictionary) from the PREFS and printing it &gt;&gt;&gt; {'Copy': 'Ctrl+D', 'Paste': 'Ctrl+V', 'Cut': 'Ctrl+X'} UserPrefs.WritePrefs(\"keybindings/Quit\", \"Ctrl+Q\") # Creating the Quit pref inside keybindings dictionary inside the PREFS file with Ctrl+Q as value print(UserPrefs.file[\"keybindings\"]) # Getting the keybindings value (which is a dictionary) from the PREFS and printing it &gt;&gt;&gt; {'Copy': 'Ctrl+D', 'Paste': 'Ctrl+V', 'Cut': 'Ctrl+X', 'Quit': 'Ctrl+Q'} . OverWritePrefs() . OverWritePrefs(prefs: dict=None) -&gt; None . Overwrites the PREFS file with the default PREFS, if passed dictionary in prefs parameter overwrites PREFS file with these. Arguments: . | prefs (dict, optional=None): A dictionary to overwrites the PREFS file with, if passed None overwrites PREFS file with default PREFS. | . Returns: None . Example: . import PREFS UserPrefs = PREFS.PREFS(prefs = { \"theme\": \"light\", \"lang\": \"en\", \"keybindings\": {\"Copy\": \"Ctrl+C\", \"Paste\": \"Ctrl+V\", \"Cut\": \"Ctrl+X\"} }) # Creating an PREFS instance UserPrefs.OverWritePrefs() # Overwriting the PREFS file with the default PREFS print(UserPrefs.file) # Getting PREFS with file attribute and printing it &gt;&gt;&gt; {'theme': 'light', 'lang': 'en', 'keybindings': {'Copy': 'Ctrl+C', 'Paste': 'Ctrl+V', 'Cut': 'Ctrl+X'}} UserPrefs.WritePrefs(\"lang\", \"es\") # Changing the lang value from en to es print(UserPrefs.file) # Getting PREFS with file attribute and printing it &gt;&gt;&gt; {'theme': 'light', 'lang': 'es', 'keybindings': {'Copy': 'Ctrl+C', 'Paste': 'Ctrl+V', 'Cut': 'Ctrl+X'}} . The first time we run the above example the program will do this: . | Define an instance of the PREFS class and pass a default PREFS | Overwrite the PREFS file with the default ones. | Print the PREFS file | Change the lang pref from en to es | Print again the PREFS file. | . The second time will do this: . | Define an instance of the PREFS class and pass a default PREFS | Overwrite the PREFS file that contains the modified lang pref with the default PREFS. | . So the program will always has the same output because we overwrite the old PREFS with the default PREFS. ChangeFilename() . ChangeFilename(filename: str) -&gt; None . This method will change the name of the PREFS file if it exists. But when you init the PREFS instance you have passed another value in filename so if you don’t change that value to new name of the file, PREFS will search for the old filename and create a new one because he couldn’t find the old one. Arguments: . | filename (str): The new filename of the PREFS file. | . Returns: None . Example: . import PREFS UserPrefs = PREFS.PREFS(prefs = { \"theme\": \"light\", \"lang\": \"en\", \"keybindings\": {\"Copy\": \"Ctrl+C\", \"Paste\": \"Ctrl+V\", \"Cut\": \"Ctrl+X\"} }) # Creating an PREFS instance UserPrefs.ChangeFilename(\"otherFilename\") # Chaning the name of the PREFS file from prefs to otherFilename . DeleteFile() . DeleteFile() -&gt; None . Deletes the PREFS file if it exists. Arguments: None Returns: None . Example: . import PREFS UserPrefs = PREFS.PREFS(prefs = { \"theme\": \"light\", \"lang\": \"en\", \"keybindings\": {\"Copy\": \"Ctrl+C\", \"Paste\": \"Ctrl+V\", \"Cut\": \"Ctrl+X\"} }) # Creating an PREFS instance UserPrefs.DeleteFile() # Delete the PREFS file . ConvertToJson() . ConvertToJson(filename: str=\"\", extension: str=\"json\") -&gt; None . Converts the PREFS file into a JSON file. Arguments: . | filename (str, optional=\"\"): The name of the JSON file, if empty the same name of the PREFS file. | extension (str, optional=\"json\"): The extension of the JSON file, json as default. | . Returns: None . Example: . import PREFS UserPrefs = PREFS.PREFS(prefs = { \"theme\": \"light\", \"lang\": \"en\", \"keybindings\": {\"Copy\": \"Ctrl+C\", \"Paste\": \"Ctrl+V\", \"Cut\": \"Ctrl+X\"} }) # Creating an PREFS instance UserPrefs.ConvertToJson() # Covnerts the PREFS file into a JSON one . ",
+    "url": "http://localhost:4000/v0.1.6/prefsclass/#methods",
+    "relUrl": "/v0.1.6/prefsclass/#methods"
+  },"6": {
+    "doc": "About",
+    "title": "Links",
+    "content": ". | Github page: https://github.com/Patitotective/PREFS. | Pypi page: https://pypi.org/project/PREFS/. | . ",
+    "url": "http://localhost:4000/v0.1.6/about/#links",
+    "relUrl": "/v0.1.6/about/#links"
+  },"7": {
+    "doc": "About",
+    "title": "If you see any issue or you have any suggestion:",
+    "content": "Post an issue in repository issues: . | https://github.com/Patitotective/PREFS/issues | . Start a new discussion in repository discussions: . | https://github.com/Patitotective/PREFS/discussions | . Contact me: . | Discord: patitotective#0127. | Email: cristobalriaga@gmail.com. | . This documentation stands for PREFS v0.1.6. Made by Patitotective. ",
+    "url": "http://localhost:4000/v0.1.6/about/#if-you-see-any-issue-or-you-have-any-suggestion",
+    "relUrl": "/v0.1.6/about/#if-you-see-any-issue-or-you-have-any-suggestion"
+  },"8": {
+    "doc": "About",
+    "title": "About",
+    "content": " ",
+    "url": "http://localhost:4000/v0.1.6/about/",
+    "relUrl": "/v0.1.6/about/"
+  },"9": {
+    "doc": "Home",
+    "title": "What is PREFS?",
+    "content": "PREFS is a simple but useful python library to store and manage user preferences. Features . | Creates a total human-readable file. | If nested dictionaries (such as key bindings) creates a tree/cascade. | Supports export/import JSON files. | . This could be a PREFS file: . #PREFS theme=\"light\" lang=\"en\" keybindings=&gt; Ctrl+D=\"Duplicate\" Ctrl+C=\"Copy\" Ctrl+V=\"Paste\" Ctrl+X=\"Cut\" Ctrl+Q=\"Quit\" . ",
+    "url": "http://localhost:4000/v0.1.6/home/#what-is-prefs",
+    "relUrl": "/v0.1.6/home/#what-is-prefs"
+  },"10": {
+    "doc": "Home",
+    "title": "Home",
+    "content": " ",
+    "url": "http://localhost:4000/v0.1.6/home/",
+    "relUrl": "/v0.1.6/home/"
+  },"11": {
+    "doc": "Outside PREFS class",
+    "title": "Table of contents",
+    "content": ". | PREFS class | Outside PREFS class . | Methods outside PREFS class . | ReadJsonFile() | ReadPrefs() | . | . | . ",
+    "url": "http://localhost:4000/v0.1.6/outsideprefsclass/#table-of-contents",
+    "relUrl": "/v0.1.6/outsideprefsclass/#table-of-contents"
+  },"12": {
+    "doc": "Outside PREFS class",
+    "title": "PREFS class",
+    "content": " ",
+    "url": "http://localhost:4000/v0.1.6/outsideprefsclass/#prefs-class",
+    "relUrl": "/v0.1.6/outsideprefsclass/#prefs-class"
+  },"13": {
+    "doc": "Outside PREFS class",
+    "title": "Outside PREFS class",
+    "content": " ",
+    "url": "http://localhost:4000/v0.1.6/outsideprefsclass/",
+    "relUrl": "/v0.1.6/outsideprefsclass/"
+  },"14": {
+    "doc": "Outside PREFS class",
+    "title": "Methods outside PREFS class",
+    "content": "Methods that aren’t inside the PREFS class. ReadJsonFile() . ReadJsonFile(filename: str, extension: str=\"json\") . Reads a JSON file and returns it’s value. Arguments: . | filename (str): The name of JSON file to read. | extension (str, optional=\"json\"): The extension of the file to read, json as default. | . Example: . import PREFS prefs = PREFS.ReadJsonFile(\"someJSONFile\") # Read someJSONFile and store it's value in prefs JSONPrefs = PREFS.PREFS(prefs, filename=\"jsonPrefs\") # Create an instance of the PREFS class using a json file as input for the prefs argument . ReadPrefs() . ReadPrefs(filename: str, extension: str=\"prefs\", separator: str=\"=\", ender: str=\"\\n\", continuer: str=\"&gt;\", interpret: bool=True, dictionary: bool=False, verbose: bool=False, cascade: bool=True) . Given the filename of PREFS file returns it’s value. The arguments are the almost the same as PREFS class. Arguments: . | filename (str, optional=\"prefs\"): The name of the file (supports path). | extension (str, optinal=\"prefs\"): The extension of the file. | separator (str, optional=\"=\"): The character between pref and value in the file. | ender (str, optional=\"\\n\"): The character at the end of each pref:value. | continuer (str, optional=\"&gt;\"): The character that precede a tree/cascade (nested dictionary). | interpret (bool, optional=True): Interpret the value stored as python. | dictionary (bool, optional=False): Writes the prefs as a python dictionary, no more human-readable (avoid any error at reading). | verbose (bool, optional=False): Print logs all operations. | cascade (bool, optional=True): Stores nested dictionaries as tree/cascade. | . Returns: A dictionary with the PREFS of the given PREFS filename. Example: . import PREFS # Instead of doing this \"\"\"UserPrefs = PREFS.PREFS(prefs = { \"theme\": \"light\", \"lang\": \"en\" })\"\"\" # Create manually a PREFS file with the default PREFS UserPrefs = PREFS.PREFS(prefs = {PREFS.ReadPrefs(\"prefs\")}) print(UserPrefs.file) &gt;&gt;&gt; {'theme': 'light', 'lang': 'en'} . The PREFS file with the default preferences looks like this: . #PREFS theme='light' lang='en' . ",
+    "url": "http://localhost:4000/v0.1.6/outsideprefsclass/#methods-outside-prefs-class",
+    "relUrl": "/v0.1.6/outsideprefsclass/#methods-outside-prefs-class"
+  },"15": {
+    "doc": "Getting started",
+    "title": "Table of contents",
+    "content": ". | PREFS class | Welcome to PREFS Documentation . | Installation and import | Create PREFS file | Read PREFS | Write PREFS | Links | . | . ",
+    "url": "http://localhost:4000/v0.1.6/start/#table-of-contents",
+    "relUrl": "/v0.1.6/start/#table-of-contents"
+  },"16": {
+    "doc": "Getting started",
+    "title": "PREFS class",
+    "content": " ",
+    "url": "http://localhost:4000/v0.1.6/start/#prefs-class",
+    "relUrl": "/v0.1.6/start/#prefs-class"
+  },"17": {
+    "doc": "Getting started",
+    "title": "Welcome to PREFS Documentation",
+    "content": "PREFS is a simple but useful python library to store and manage user preferences. ",
+    "url": "http://localhost:4000/v0.1.6/start/#welcome-to-prefs-documentation",
+    "relUrl": "/v0.1.6/start/#welcome-to-prefs-documentation"
+  },"18": {
+    "doc": "Getting started",
+    "title": "Installation and import",
+    "content": "To install PREFS you need to have pip installed (if you don’t have it installed see pip.pypa.io/en/stable/installing): . Windows: pip install PREFS MacOS and Linux: pip3 install PREFS . Once you have installed PREFS correctly create a new python file and import PREFS: . import PREFS # Importing PREFS python library . ",
+    "url": "http://localhost:4000/v0.1.6/start/#installation-and-import",
+    "relUrl": "/v0.1.6/start/#installation-and-import"
+  },"19": {
+    "doc": "Getting started",
+    "title": "Create PREFS file",
+    "content": "To create a PREFS file you need to create an instance of the PREFS class passing in the prefs parameter a dictionary with the default PREFS: . UserPrefs = PREFS.PREFS(prefs = { \"theme\": \"light\", \"lang\": \"en\", \"keybindings\": {\"Copy\": \"Ctrl+C\", \"Paste\": \"Ctrl+V\", \"Cut\": \"Ctrl+X\"} }) # Creating an instance of the PREFS class passing the default prefs as a dictionary in prefs paramater . PREFS class has others optional parameters such as: . | filename (str, default=\"prefs\"): The name of the PREFS file (supports path). | interpret (bool, default=True): If True interpret all types, if False interpret all as a string. | . If you open your PREFS file, you will see something like this: . #PREFS theme='light' lang='en' keybindings=&gt; Copy='Ctrl+C' Paste='Ctrl+V' Cut='Ctrl+X' . ",
+    "url": "http://localhost:4000/v0.1.6/start/#create-prefs-file",
+    "relUrl": "/v0.1.6/start/#create-prefs-file"
+  },"20": {
+    "doc": "Getting started",
+    "title": "Read PREFS",
+    "content": "To access to the PREFS file you can call the ReadPrefs() method or access to the file attribute, both returns a dictionary with the PREFS: . Using ReadPrefs() method: . print(UserPrefs.ReadPrefs()) # Getting PREFS with ReadPrefs() method and printing it &gt;&gt;&gt; {'theme': 'light', 'lang': 'en', 'keybindings': {'Copy': 'Ctrl+C', 'Paste': 'Ctrl+V', 'Cut': 'Ctrl+X'}} . Using file attribute: . print(UserPrefs.file) # Getting PREFS with file attribute and printing it &gt;&gt;&gt; {'theme': 'light', 'lang': 'en', 'keybindings': {'Copy': 'Ctrl+C', 'Paste': 'Ctrl+V', 'Cut': 'Ctrl+X'}} . ",
+    "url": "http://localhost:4000/v0.1.6/start/#read-prefs",
+    "relUrl": "/v0.1.6/start/#read-prefs"
+  },"21": {
+    "doc": "Getting started",
+    "title": "Write PREFS",
+    "content": "To change the value of a pref you need to use WritePrefs() method which requires: . | pref (str): The name of the pref to modify or create if it doesn’t exist. | value (any): The value to assign to the given pref. | . For example: . print(UserPrefs.file[\"lang\"]) # Getting the lang value from the PREFS and printing it &gt;&gt;&gt; en UserPrefs.WritePrefs(\"lang\", \"es\") # Changing the lang value from en to es print(UserPrefs.file[\"lang\"]) # Getting the lang value from the PREFS and printing it &gt;&gt;&gt; es . If you want to change the value of a nested dictionary (e.g. keybindings) you need to pass the keys path separated by a forward slash. For example: . print(UserPrefs.file[\"keybindings\"]) # Getting the keybindings value (which is a dictionary) from the PREFS and printing it &gt;&gt;&gt; {'Copy': 'Ctrl+C', 'Paste': 'Ctrl+V', 'Cut': 'Ctrl+X'} UserPrefs.WritePrefs(\"keybindings/Copy\", \"Ctrl+D\") # Changing the Copy value inside the dictionary keybindings inside the PREFS file from Ctrll+C to Ctrl+D print(UserPrefs.file[\"keybindings\"]) # Getting the keybindings value (which is a dictionary) from the PREFS and printing it &gt;&gt;&gt; {'Copy': 'Ctrl+D', 'Paste': 'Ctrl+V', 'Cut': 'Ctrl+X'} . In the above example we have accessed to a nested dictionary using the keys path and modified the pref Copy from Ctrl+C to Ctrl+D. As you know PREFS file is a dictionary so if you pass any key that isn’t in the PREFS file it will be created: For example: . print(UserPrefs.file[\"keybindings\"]) # Getting the keybindings value (which is a dictionary) from the PREFS and printing it &gt;&gt;&gt; {'Copy': 'Ctrl+D', 'Paste': 'Ctrl+V', 'Cut': 'Ctrl+X'} UserPrefs.WritePrefs(\"keybindings/Quit\", \"Ctrl+Q\") # Creating the Quit pref inside keybindings dictionary inside the PREFS file with Ctrl+Q as value print(UserPrefs.file[\"keybindings\"]) # Getting the keybindings value (which is a dictionary) from the PREFS and printing it &gt;&gt;&gt; {'Copy': 'Ctrl+D', 'Paste': 'Ctrl+V', 'Cut': 'Ctrl+X', 'Quit': 'Ctrl+Q'} . ",
+    "url": "http://localhost:4000/v0.1.6/start/#write-prefs",
+    "relUrl": "/v0.1.6/start/#write-prefs"
+  },"22": {
+    "doc": "Getting started",
+    "title": "Links",
+    "content": ". | Github page: https://github.com/Patitotective/PREFS. | Pypi page: https://pypi.org/project/PREFS/. | Contact me: . | Discord: patitotective#0127. | Email: cristobalriaga@gmail.com. | . | . ",
+    "url": "http://localhost:4000/v0.1.6/start/#links",
+    "relUrl": "/v0.1.6/start/#links"
+  },"23": {
+    "doc": "Getting started",
+    "title": "Getting started",
+    "content": " ",
+    "url": "http://localhost:4000/v0.1.6/start/",
+    "relUrl": "/v0.1.6/start/"
+  },"24": {
+    "doc": "Versions",
+    "title": "Documentation versions",
+    "content": ". | v0.1.6 | . ",
+    "url": "http://localhost:4000/versions/#documentation-versions",
+    "relUrl": "/versions/#documentation-versions"
+  },"25": {
+    "doc": "Versions",
+    "title": "Versions",
+    "content": " ",
+    "url": "http://localhost:4000/versions/",
+    "relUrl": "/versions/"
+  }
+}
