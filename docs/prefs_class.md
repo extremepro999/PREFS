@@ -1,16 +1,3 @@
----
-nav_order: 2
-permalink: v0.1.6/prefsclass/
-title: PREFS class
-version: v0.1.6
----
-
-## Table of contents
-{: .no_toc .text-delta }
-
-1. TOC
-{:toc}
-
 ## Init
 
 ```python

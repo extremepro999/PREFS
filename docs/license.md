@@ -1,9 +1,4 @@
----
-nav_order: 6
-permalink: v0.1.7/license/
-title: License MIT
-version: v0.1.7
----
+## MIT license
 
 ```
 Copyright 2021 Cristobal Riaga

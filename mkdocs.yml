@@ -1,0 +1,15 @@
+site_name: PREFS documentation
+site_url: https://prefs-documentation.com/
+
+theme:
+    name: readthedocs
+    highlightjs: true
+    hljs_languages:
+        - python
+nav:
+    - Home: index.md
+    - Getting started: start.md
+    - PREFS class: prefs_class.md
+    - Methods: methods.md
+    - About: about.md
+    - License: license.md

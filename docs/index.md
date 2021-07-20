@@ -1,14 +1,3 @@
----
-layout: home
-nav_order: 0
-permalink: v0.1.7/home/
-title: Home
-version: v0.1.7
----
-
-<!-- <link rel="stylesheet" href="/css/monokai.css" type="text/css" /> -->
-
-
 # What is PREFS?
 
 PREFS is a simple but useful python library to store and manage user preferences.

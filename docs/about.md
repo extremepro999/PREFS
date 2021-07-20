@@ -1,11 +1,3 @@
----
-layout: page
-nav_order: 5
-permalink: v0.1.6/about/
-title: About
-version: v0.1.6
----
-
 ## Links
 
 -   Github page: [https://github.com/Patitotective/PREFS](https://github.com/Patitotective/PREFS).
@@ -17,15 +9,15 @@ Post an issue in repository issues:
 
 -   [https://github.com/Patitotective/PREFS/issues](https://github.com/Patitotective/PREFS/issues)
 
-Start a new discussion in repository discussions:
+Or start a new discussion in repository discussions:
 
 -   [https://github.com/Patitotective/PREFS/discussions](https://github.com/Patitotective/PREFS/discussions)
 
-Contact me:
+Or contact me:
 
 -   Discord: **patitotective#0127**.
 -   Email: **cristobalriaga@gmail.com**.
 
-This documentation stands for PREFS v0.1.6.
+This documentation stands for PREFS v0.1.7.
 
 Made by Patitotective.

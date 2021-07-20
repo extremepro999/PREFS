@@ -1,16 +1,3 @@
----
-nav_order: 1
-permalink: v0.1.6/start/
-title: Getting started
-version: v0.1.6
----
-
-## Table of contents
-{: .no_toc .text-delta }
-
-1. TOC
-{:toc}
-
 ## Installation and import
 
 To install PREFS you need to have pip installed (if you don't have it installed see [pip.pypa.io/en/stable/installing](https://pip.pypa.io/en/stable/installing/)):

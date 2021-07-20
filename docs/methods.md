@@ -1,18 +1,3 @@
----
-nav_order: 3
-permalink: v0.1.7/outsideprefsclass/
-title: Outside PREFS class
-version: v0.1.7
----
-
-<!-- <link rel="stylesheet" href="/css/monokai.css" type="text/css" /> -->
-
-## Table of contents
-{: .no_toc .text-delta }
-
-1. TOC
-{:toc}
-
 ## Methods outside PREFS class
 
 Methods that aren't inside the PREFS class.
