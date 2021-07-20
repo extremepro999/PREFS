@@ -1,3 +1,10 @@
+---
+layout: page
+nav_order: 4
+permalink: /versions/
+title: Versions
+---
+
 ## Documentation versions
 
 - [v0.1.7](https://patitotective.github.io/PREFS/v0.1.7/home)

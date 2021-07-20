@@ -33,25 +33,27 @@ def CreateVersionsFile(filename="versions", extension="md"):
 	if os.path.exists(f"{filename}.{extension}"): os.remove(f"{filename}.{extension}")
 
 	with open(f"{filename}.{extension}", "w+") as file:
+
 		file.write("## Documentation versions\n\n")
 
 		for version in directories:
 			file.write(f"- [{version}](https://patitotective.github.io/PREFS/{version}/home)\n")
-
-		### Add front matter
-		fileMatter = frontmatter.load(f"{filename}.{extension}")
-		fileMatter["layout"] = "page" 
-		fileMatter["tittle"] = "Versions"
-		fileMatter["permalink"] = "/versions/"
-		fileMatter["nav_order"] = 4
-
-		frontmatter.dump(fileMatter, f"{filename}.{extension}")
 
 		### Add changelog at end
 		with open("/home/carlos/Documents/Projects/PREFS/Code/docs/CHANGELOG.md") as changelogFile:
 			changelogFile = changelogFile.read()
 	
 			file.write(f"\n{changelogFile}")
+
+	### Add front matter
+	fileMatter = frontmatter.load(f"{filename}.{extension}")
+		
+	fileMatter["layout"] = "page" 
+	fileMatter["title"] = "Versions"
+	fileMatter["permalink"] = "/versions/"
+	fileMatter["nav_order"] = 4
+
+	frontmatter.dump(fileMatter, f"{filename}.{extension}")
 
 if __name__ == "__main__":
 	CreateVersionsFile()
