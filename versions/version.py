@@ -49,8 +49,8 @@ def CreateVersionsFile(filename="versions", extension="md"):
 	fileMatter = frontmatter.load(f"{filename}.{extension}")
 		
 	fileMatter["layout"] = "page" 
-	fileMatter["title"] = "Versions"
-	fileMatter["permalink"] = "/versions/"
+	fileMatter["title"] = "Documentation versions"
+	fileMatter["permalink"] = "versions/"
 	fileMatter["nav_order"] = 4
 
 	frontmatter.dump(fileMatter, f"{filename}.{extension}")

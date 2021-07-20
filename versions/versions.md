@@ -1,8 +1,8 @@
 ---
 layout: page
 nav_order: 4
-permalink: /versions/
-title: Versions
+permalink: versions/
+title: Documentation versions
 ---
 
 ## Documentation versions
