@@ -1,11 +1,6 @@
 ## Init
 
 ```python
-PREFS.PREFS(self, prefs: dict, filename: str="prefs", extension: str="prefs", separator: str="=", ender: str="\n", continuer: str=">",
-interpret: bool=True, dictionary: bool=False, verbose: bool=False, cascade: bool=True):
-```
-
-```python
 prefs (dict): A dictionary with the default preferences.
 filename (str, optional="prefs"): The name of the file (supports path).
 extension (str, optional="prefs"): The extension of the file.
