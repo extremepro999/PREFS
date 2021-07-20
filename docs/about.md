@@ -1,6 +1,6 @@
 ## Links
 
--   Github page: [https://github.com/Patitotective/PREFS](https://github.com/Patitotective/PREFS).
+-   GitHub page: [https://github.com/Patitotective/PREFS](https://github.com/Patitotective/PREFS).
 -   Pypi page: [https://pypi.org/project/PREFS/](https://pypi.org/project/PREFS/).
 
 ## If you see any issue or you have any suggestion:

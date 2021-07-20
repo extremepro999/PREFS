@@ -40,7 +40,7 @@ The arguments are the almost the same as PREFS class.
 Arguments:
 
 - `filename (str, optional="prefs")`: The name of the file (supports path).
-- `extension (str, optinal="prefs")`: The extension of the file.
+- `extension (str, optional="prefs")`: The extension of the file.
 - `separator (str, optional="=")`: The character between pref and value in the file.
 - `ender (str, optional="\n")`: The character at the end of each pref:value.
 - `continuer (str, optional=">")`: The character that precede a tree/cascade (nested dictionary).

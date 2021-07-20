@@ -22,7 +22,7 @@ UserPrefs = PREFS.PREFS(prefs = {
     "theme": "light",
     "lang": "en",
     "keybindings": {"Copy": "Ctrl+C", "Paste": "Ctrl+V", "Cut": "Ctrl+X"}
-    }) # Creating an instance of the PREFS class passing the default prefs as a dictionary in prefs paramater
+    }) # Creating an instance of the PREFS class passing the default prefs as a dictionary in prefs parameter
 ```
 
 PREFS class has others optional parameters such as:
@@ -89,7 +89,7 @@ For example:
 print(UserPrefs.file["keybindings"]) # Getting the keybindings value (which is a dictionary) from the PREFS and printing it
 >>> {'Copy': 'Ctrl+C', 'Paste': 'Ctrl+V', 'Cut': 'Ctrl+X'}
 
-UserPrefs.WritePrefs("keybindings/Copy", "Ctrl+D") # Changing the Copy value inside the dictionary keybindings inside the PREFS file from Ctrll+C to Ctrl+D
+UserPrefs.WritePrefs("keybindings/Copy", "Ctrl+D") # Changing the Copy value inside the dictionary keybindings inside the PREFS file from Ctrl+C to Ctrl+D
 
 print(UserPrefs.file["keybindings"]) # Getting the keybindings value (which is a dictionary) from the PREFS and printing it
 >>> {'Copy': 'Ctrl+D', 'Paste': 'Ctrl+V', 'Cut': 'Ctrl+X'}
@@ -114,7 +114,7 @@ print(UserPrefs.file["keybindings"]) # Getting the keybindings value (which is a
 
 ## Links
 
--   Github page: [https://github.com/Patitotective/PREFS](https://github.com/Patitotective/PREFS).
+-   GitHub page: [https://github.com/Patitotective/PREFS](https://github.com/Patitotective/PREFS).
 -   Pypi page: [https://pypi.org/project/PREFS/](https://pypi.org/project/PREFS/).
 
 -   Contact me:

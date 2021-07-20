@@ -8,7 +8,7 @@ interpret: bool=True, dictionary: bool=False, verbose: bool=False, cascade: bool
 ```python
 prefs (dict): A dictionary with the default preferences.
 filename (str, optional="prefs"): The name of the file (supports path).
-extension (str, optinal="prefs"): The extension of the file.
+extension (str, optional="prefs"): The extension of the file.
 separator (str, optional="="): The character between pref and value in the file.
 ender (str, optional="\n"): The character at the end of each pref:value.
 continuer (str, optional=">"): The character that precede a tree/cascade (nested dictionary).
@@ -24,7 +24,7 @@ Ignoring the init parameters.
 
 ### `file`
 
-Easier way to acces to the PREFS file. Has the same value as `ReadPrefs()`.  
+Easier way to access to the PREFS file. Has the same value as `ReadPrefs()`.  
 Example:
 
 ```python
@@ -123,7 +123,7 @@ UserPrefs = PREFS.PREFS(prefs = {
 print(UserPrefs.file["keybindings"]) # Getting the keybindings value (which is a dictionary) from the PREFS and printing it
 >>> {'Copy': 'Ctrl+C', 'Paste': 'Ctrl+V', 'Cut': 'Ctrl+X'}
 
-UserPrefs.WritePrefs("keybindings/Copy", "Ctrl+D") # Changing the Copy value inside the dictionary keybindings inside the PREFS file from Ctrll+C to Ctrl+D
+UserPrefs.WritePrefs("keybindings/Copy", "Ctrl+D") # Changing the Copy value inside the dictionary keybindings inside the PREFS file from Ctrl+C to Ctrl+D
 
 print(UserPrefs.file["keybindings"]) # Getting the keybindings value (which is a dictionary) from the PREFS and printing it
 >>> {'Copy': 'Ctrl+D', 'Paste': 'Ctrl+V', 'Cut': 'Ctrl+X'}
@@ -231,7 +231,7 @@ UserPrefs = PREFS.PREFS(prefs = {
     "keybindings": {"Copy": "Ctrl+C", "Paste": "Ctrl+V", "Cut": "Ctrl+X"}
     }) # Creating an PREFS instance
 
-UserPrefs.ChangeFilename("otherFilename") # Chaning the name of the PREFS file from prefs to otherFilename
+UserPrefs.ChangeFilename("otherFilename") # Changing the name of the PREFS file from prefs to otherFilename
 
 ```
 
@@ -288,6 +288,6 @@ UserPrefs = PREFS.PREFS(prefs = {
     "keybindings": {"Copy": "Ctrl+C", "Paste": "Ctrl+V", "Cut": "Ctrl+X"}
     }) # Creating an PREFS instance
 
-UserPrefs.ConvertToJson() # Covnerts the PREFS file into a JSON one
+UserPrefs.ConvertToJson() # Coverts the PREFS file into a JSON one
 
 ```

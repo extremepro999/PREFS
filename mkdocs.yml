@@ -1,15 +1,23 @@
 site_name: PREFS documentation
 site_url: https://prefs-documentation.com/
+repo_url: https://github.com/Patitotective/PREFS
+site_description: PREFS is a simple but useful library to store and manage user preferences. This is the documentation.
+site_author: Cristobal Riaga
+remote_branch: documentation
 
 theme:
-    name: readthedocs
-    highlightjs: true
-    hljs_languages:
-        - python
+  name: readthedocs
+
 nav:
     - Home: index.md
     - Getting started: start.md
-    - PREFS class: prefs_class.md
-    - Methods: methods.md
-    - About: about.md
-    - License: license.md
+    - API:
+      - PREFS class: prefs_class.md
+      - Methods: methods.md
+    - About: 
+      - About: about.md
+      - Changelog: CHANGELOG.md
+      - License: license.md
+
+extra:
+    version: v0.1.7
