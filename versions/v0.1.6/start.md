@@ -11,12 +11,6 @@ version: v0.1.6
 1. TOC
 {:toc}
 
-# PREFS class
-
-# Welcome to PREFS Documentation
-
-PREFS is a simple but useful python library to store and manage user preferences.
-
 ## Installation and import
 
 To install PREFS you need to have pip installed (if you don't have it installed see [pip.pypa.io/en/stable/installing](https://pip.pypa.io/en/stable/installing/)):
