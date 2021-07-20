@@ -13,8 +13,6 @@ version: v0.1.7
 1. TOC
 {:toc}
 
-# PREFS class
-
 ## Init
 
 ```python

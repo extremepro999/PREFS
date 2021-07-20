@@ -2,6 +2,7 @@
 import glob
 import os
 import frontmatter
+from pathlib import Path
 
 getDirs = lambda dirname: [f.path for f in os.scandir(dirname) if f.is_dir()]
 
@@ -45,6 +46,12 @@ def CreateVersionsFile(filename="versions", extension="md"):
 		fileMatter["nav_order"] = 4
 
 		frontmatter.dump(fileMatter, f"{filename}.{extension}")
+
+		### Add changelog at end
+		with open("/home/carlos/Documents/Projects/PREFS/Code/docs/CHANGELOG.md") as changelogFile:
+			changelogFile = changelogFile.read()
+	
+			file.write(f"\n{changelogFile}")
 
 if __name__ == "__main__":
 	CreateVersionsFile()

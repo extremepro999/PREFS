@@ -3,17 +3,14 @@
 - [v0.1.7](https://patitotective.github.io/PREFS/v0.1.7/home)
 - [v0.1.6](https://patitotective.github.io/PREFS/v0.1.6/home)
 
-
-## Change log
+# Change Log
 
 - v0.1.7 (20/07/2021)
 
     - Added `ConvertToPREFS()` function (outside PRFS class) that do the same as `dumps()` in json. Converts a dictionary into a PREFS file but instead of writting the PREFS in a file returns it as string.
     - Changed `ReadPrefs()` function name (outside PREFS class) to `ReadPREFSFile()`.
     - Fixed issue when dictionary=True parameter, fixed issue when dictionary=True and interpret=True parameter.
-
 ---
-
 - 0.1.6 (18/07/2021)
 
     Added ReadPrefs function outside PREFS class that reads a PREFS file and return it's value.

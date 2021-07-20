@@ -13,10 +13,6 @@ version: v0.1.7
 1. TOC
 {:toc}
 
-# PREFS class
-
-# Outside PREFS class
-
 ## Methods outside PREFS class
 
 Methods that aren't inside the PREFS class.
