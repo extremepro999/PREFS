@@ -30,6 +30,8 @@ github_username: Patitotective
 theme: "just-the-docs"
 
 markdown: kramdown
-highlighter: rouge
+color_scheme: light
+
+#highlighter: css/monokai.css
 plugins:
   - jekyll-feed

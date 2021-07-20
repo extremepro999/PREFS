@@ -1,9 +1,11 @@
 ---
 nav_order: 2
-permalink: v0.1.6/prefsclass/
+permalink: v0.1.7/prefsclass/
 title: PREFS class
-version: v0.1.6
+version: v0.1.7
 ---
+
+<!-- <link rel="stylesheet" href="/css/monokai.css" type="text/css" /> -->
 
 ## Table of contents
 {: .no_toc .text-delta }

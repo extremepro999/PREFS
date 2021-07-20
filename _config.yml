@@ -27,6 +27,7 @@ url: "" # "https://patitotective.github.io/PREFS" # the base hostname & protocol
 github_username: Patitotective
 
 remote_theme: pmarsceill/just-the-docs
+color_scheme: light
 
 markdown: kramdown
 highlighter: rouge

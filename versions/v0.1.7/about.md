@@ -1,9 +1,9 @@
 ---
 layout: page
 nav_order: 5
-permalink: v0.1.6/about/
+permalink: v0.1.7/about/
 title: About
-version: v0.1.6
+version: v0.1.7
 ---
 
 ## Links
@@ -26,6 +26,6 @@ Contact me:
 -   Discord: **patitotective#0127**.
 -   Email: **cristobalriaga@gmail.com**.
 
-This documentation stands for PREFS v0.1.6.
+This documentation stands for PREFS v0.1.7.
 
 Made by Patitotective.

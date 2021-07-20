@@ -2,6 +2,7 @@
 nav_order: 6
 permalink: v0.1.6/license/
 title: License MIT
+version: v0.1.6
 ---
 
 Copyright 2021 Cristobal Riaga

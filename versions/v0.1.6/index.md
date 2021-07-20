@@ -3,6 +3,7 @@ layout: home
 nav_order: 0
 permalink: v0.1.6/home/
 title: Home
+version: v0.1.6
 ---
 
 # What is PREFS?

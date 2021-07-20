@@ -1,9 +1,11 @@
 ---
 nav_order: 3
-permalink: v0.1.6/outsideprefsclass/
+permalink: v0.1.7/outsideprefsclass/
 title: Outside PREFS class
-version: v0.1.6
+version: v0.1.7
 ---
+
+<!-- <link rel="stylesheet" href="/css/monokai.css" type="text/css" /> -->
 
 ## Table of contents
 {: .no_toc .text-delta }
@@ -19,10 +21,11 @@ version: v0.1.6
 
 Methods that aren't inside the PREFS class.
 
+---
 ### `ReadJsonFile()`
 
 ```python
-ReadJsonFile(filename: str, extension: str="json")
+ReadJsonFile(filename: str, extension: str="json") -> any
 ```
 
 Reads a JSON file and returns it's value.
@@ -39,15 +42,14 @@ import PREFS
 
 prefs = PREFS.ReadJsonFile("someJSONFile") # Read someJSONFile and store it's value in prefs
 JSONPrefs = PREFS.PREFS(prefs, filename="jsonPrefs") # Create an instance of the PREFS class using a json file as input for the prefs argument
-
 ```
 
-### `ReadPrefs()`
+---
+### `ReadPREFSFile()`
 
 ```python
-
 ReadPrefs(filename: str, extension: str="prefs", separator: str="=", ender: str="\n", continuer: str=">", 
-		interpret: bool=True, dictionary: bool=False, verbose: bool=False, cascade: bool=True)
+		interpret: bool=True, dictionary: bool=False, verbose: bool=False, cascade: bool=True) -> dict
 ```
 
 Given the filename of PREFS file returns it's value.
@@ -81,16 +83,64 @@ import PREFS
     })"""
 
 # Create manually a PREFS file with the default PREFS
-UserPrefs = PREFS.PREFS(prefs = {PREFS.ReadPrefs("prefs")})
+UserPrefs = PREFS.PREFS(prefs = PREFS.ReadPREFSFile("prefs"))
 
 print(UserPrefs.file)
 
 >>> {'theme': 'light', 'lang': 'en'}
 ```
 
-The PREFS file with the default preferences looks like this:
-```
+This is the `prefs` file given as the default PREFS:
+```python
 #PREFS
 theme='light'
 lang='en'
+```
+
+---
+### `ConvertToPREFS()`
+```python
+ConvertToPREFS(prefs: dict, separator: str="=", ender: str="\n", continuer: str=">", 
+        interpret: bool=True, dictionary: bool=False, verbose: bool=False, cascade: bool=True) -> str
+```
+
+Converts the given dictionary into PREFS format and returns it as string:
+
+Arguments:
+
+- `prefs (dict)`: A dictionary with the default preferences.
+- `separator (str, optional="=")`: The character between pref and value in the file.
+- `ender (str, optional="\n")`: The character at the end of each pref:value.
+- `continuer (str, optional=">")`: The character that precede a tree/cascade (nested dictionary).
+- `dictionary (bool, optional=False)`: Writes the prefs as a python dictionary, no more human-readable (avoid any error at reading).
+- `verbose (bool, optional=False)`: Print logs all operations.
+- `cascade (bool, optional=True)`: Stores nested dictionaries as tree/cascade.
+
+
+Returns:
+    A string with the given dictionary in PREFS format. 
+
+Example:
+
+```python
+import PREFS
+
+prefs = {
+    "theme": "light",
+    "lang": "en",
+    "keybindings": {"Copy": "Ctrl+C", "Paste": "Ctrl+V", "Cut": "Ctrl+X"}
+    } # Defining a dictionary with a example of default PREFS
+
+PREFSrepresentation = PREFS.ConvertToPREFS(prefs) # Converting prefs dictionary into PREFS format
+
+print(PREFSrepresentation) # Printing the PREFSrepresentation of prefs dictionary
+
+>>> 
+#PREFS
+theme='light'
+lang='en'
+keybindings=>
+    Copy='Ctrl+C'
+    Paste='Ctrl+V'
+    Cut='Ctrl+X'
 ```

@@ -1,9 +1,11 @@
 ---
 nav_order: 1
-permalink: v0.1.6/start/
+permalink: v0.1.7/start/
 title: Getting started
-version: v0.1.6
+version: v0.1.7
 ---
+
+<!-- <link rel="stylesheet" href="/css/monokai.css" type="text/css" /> -->
 
 ## Table of contents
 {: .no_toc .text-delta }
